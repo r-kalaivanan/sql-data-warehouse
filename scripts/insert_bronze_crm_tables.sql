@@ -10,10 +10,15 @@ BEGIN
 
 	DECLARE @start_time DATETIME,
 			@end_time DATETIME,
-			@duration INT;
+			@duration INT,
+            @batch_start_time DATETIME,
+            @batch_end_time DATETIME,
+            @batch_duration INT;
 
 	BEGIN TRY
-
+        
+        SET @batch_start_time = GETDATE();
+        
 		RAISERROR('=============================', 0,1) WITH NOWAIT;
 		RAISERROR('Starting Bronze Layer Load', 0, 1) WITH NOWAIT;
         RAISERROR('==============================', 0, 1) WITH NOWAIT;
@@ -115,6 +120,11 @@ BEGIN
         RAISERROR('==============================', 0, 1) WITH NOWAIT;
 
         RAISERROR('Bronze Layer Load Completed Successfully', 0, 1) WITH NOWAIT;
+
+        SET @batch_end_time = GETDATE();
+        SET @batch_duration = DATEDIFF(SECOND, @batch_start_time, @batch_end_time);
+        RAISERROR('Batch Load Duration : %d seconds', 0, 1, @batch_duration) WITH NOWAIT;
+         RAISERROR('==============================', 0, 1) WITH NOWAIT;
 
     END TRY
     BEGIN CATCH
