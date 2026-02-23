@@ -19,7 +19,7 @@ BEGIN
         
         SET @batch_start_time = GETDATE();
         
-		RAISERROR('=============================', 0,1) WITH NOWAIT;
+		RAISERROR('==============================', 0,1) WITH NOWAIT;
 		RAISERROR('Starting Bronze Layer Load', 0, 1) WITH NOWAIT;
         RAISERROR('==============================', 0, 1) WITH NOWAIT;
 
