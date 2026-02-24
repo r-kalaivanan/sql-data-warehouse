@@ -1,3 +1,8 @@
+SET NOCOUNT ON;
+RAISERROR('>> Truncating Table : silver.erp_cust_az12', 0, 1) WITH NOWAIT;
+TRUNCATE TABLE silver.erp_cust_az12;
+RAISERROR('>> Inserting Data Into : silver.erp_cust_az12', 0, 1) WITH NOWAIT;
+
 INSERT INTO silver.erp_cust_az12 (
 	cid,
 	bdate,

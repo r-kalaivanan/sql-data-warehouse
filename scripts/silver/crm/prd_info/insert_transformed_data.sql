@@ -1,3 +1,8 @@
+SET NOCOUNT ON;
+RAISERROR('>> Truncating Table : silver.crm_prd_info', 0, 1) WITH NOWAIT;
+TRUNCATE TABLE silver.crm_prd_info;
+RAISERROR('>> Inserting Data Into : silver.crm_prd_info', 0, 1) WITH NOWAIT;
+
 INSERT INTO silver.crm_prd_info (
 	prd_id,
 	cat_id,

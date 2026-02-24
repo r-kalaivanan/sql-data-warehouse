@@ -1,3 +1,8 @@
+SET NOCOUNT ON;
+RAISERROR('>> Truncating Table : silver.crm_cust_info', 0, 1) WITH NOWAIT;
+TRUNCATE TABLE silver.crm_cust_info;
+RAISERROR('>> Inserting Data Into : silver.crm_cust_info', 0, 1) WITH NOWAIT;
+
 INSERT INTO silver.crm_cust_info (
 	cst_id,
 	cst_key,
