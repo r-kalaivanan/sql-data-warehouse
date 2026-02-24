@@ -1,3 +1,11 @@
+/*
+
+Purpose : Tranforms and strandadizes raw bronze data into structured, cleaned and analytics - ready silver tables.
+
+Description : This procedure performs a full refresh of the silver layer by truncating existing silver tables and loading transformed data from the bronze layer.
+
+*/
+
 CREATE OR ALTER PROCEDURE silver.load_silver AS
 BEGIN
 
