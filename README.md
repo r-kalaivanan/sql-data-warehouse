@@ -8,24 +8,7 @@
 
 ---
 
-## 📋 Table of Contents
-
-- [Overview](#overview)
-- [Architecture](#architecture)
-- [Features](#features)
-- [Prerequisites](#prerequisites)
-- [Installation](#installation)
-- [Project Structure](#project-structure)
-- [Data Flow](#data-flow)
-- [Usage](#usage)
-- [Documentation](#documentation)
-- [Data Governance](#data-governance)
-- [Contributing](#contributing)
-- [License](#license)
-
----
-
-## 🎯 Overview
+## Overview
 
 This project implements a production-ready data warehouse solution that integrates data from multiple source systems (CRM and ERP) to provide a unified view for business intelligence and analytics. The warehouse follows the **Medallion Architecture** pattern with three distinct layers, ensuring data quality, scalability, and performance.
 
@@ -39,7 +22,7 @@ This project implements a production-ready data warehouse solution that integrat
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
 The data warehouse implements a **three-tier medallion architecture**:
 
@@ -76,14 +59,14 @@ The data warehouse implements a **three-tier medallion architecture**:
 
 ### Layer Descriptions
 
-#### 🥉 Bronze Layer
+#### Bronze Layer
 
 - **Purpose**: Raw data ingestion from source systems
 - **Characteristics**: Minimal transformation, preserves source data as-is
 - **Sources**: CRM (customers, products, sales) and ERP (demographics, locations, categories)
 - **Schema**: `bronze.crm_*` and `bronze.erp_*` tables
 
-#### 🥈 Silver Layer
+#### Silver Layer
 
 - **Purpose**: Data cleansing, standardization, and quality assurance
 - **Characteristics**:
@@ -93,7 +76,7 @@ The data warehouse implements a **three-tier medallion architecture**:
   - Slow-changing dimension (SCD) handling
 - **Schema**: `silver.crm_*` and `silver.erp_*` tables
 
-#### 🥇 Gold Layer
+#### Gold Layer
 
 - **Purpose**: Business-ready dimensional model for analytics
 - **Characteristics**:
@@ -105,39 +88,39 @@ The data warehouse implements a **three-tier medallion architecture**:
 
 ---
 
-## ✨ Features
+## Features
 
 ### Data Integration
 
-- ✅ Multi-source data integration (CRM + ERP)
-- ✅ Automated ETL pipelines with stored procedures
-- ✅ Change data capture and historical tracking
-- ✅ Data lineage and transformation documentation
+- Multi-source data integration (CRM + ERP)
+- Automated ETL pipelines with stored procedures
+- Change data capture and historical tracking
+- Data lineage and transformation documentation
 
 ### Data Quality
 
-- ✅ Automated quality checks at each layer
-- ✅ Null value handling and default value assignment
-- ✅ Data validation rules and constraints
-- ✅ Duplicate detection and resolution
+- Automated quality checks at each layer
+- Null value handling and default value assignment
+- Data validation rules and constraints
+- Duplicate detection and resolution
 
 ### Analytics & Reporting
 
-- ✅ Star schema dimensional model
-- ✅ Pre-aggregated metrics for performance
-- ✅ Time-series analysis capabilities
-- ✅ Customer and product analytics
+- Star schema dimensional model
+- Pre-aggregated metrics for performance
+- Time-series analysis capabilities
+- Customer and product analytics
 
 ### Performance & Scalability
 
-- ✅ Optimized query patterns
-- ✅ Materialized views for frequently accessed data
-- ✅ Incremental loading strategies
-- ✅ Partition-ready design
+- Optimized query patterns
+- Materialized views for frequently accessed data
+- Incremental loading strategies
+- Partition-ready design
 
 ---
 
-## 📦 Prerequisites
+## Prerequisites
 
 Before setting up the data warehouse, ensure you have:
 
@@ -153,7 +136,7 @@ Before setting up the data warehouse, ensure you have:
 
 ---
 
-## 🚀 Installation
+## Installation
 
 Follow these steps to set up the data warehouse:
 
@@ -227,7 +210,7 @@ GO
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 sql-data-warehouse/
@@ -287,7 +270,7 @@ sql-data-warehouse/
 
 ---
 
-## 🔄 Data Flow
+## Data Flow
 
 ### End-to-End Pipeline
 
@@ -336,7 +319,7 @@ The `silver.load_silver` stored procedure orchestrates the entire ETL pipeline:
 
 ---
 
-## 💻 Usage
+## Usage
 
 ### Querying the Data Warehouse
 
@@ -418,7 +401,7 @@ SELECT COUNT(*) FROM gold.fact_sales;
 
 ---
 
-## 📚 Documentation
+## Documentation
 
 Comprehensive documentation is available in the `docs/` folder:
 
@@ -434,7 +417,7 @@ Comprehensive documentation is available in the `docs/` folder:
 
 ---
 
-## 🛡️ Data Governance
+## Data Governance
 
 ### Data Quality Standards
 
@@ -464,7 +447,7 @@ DENY SELECT ON SCHEMA::bronze TO analyst_role;
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 We welcome contributions! Please follow these guidelines:
 
@@ -487,13 +470,13 @@ We welcome contributions! Please follow these guidelines:
 
 ---
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
-## 📞 Contact & Support
+## Contact & Support
 
 For questions, issues, or suggestions:
 
@@ -503,16 +486,8 @@ For questions, issues, or suggestions:
 
 ---
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
-Built with best practices from:
+Special thanks to **Data with Barra** for the inspiration and knowledge shared through his YouTube channel.
 
-- Kimball Dimensional Modeling techniques
-- Databricks Medallion Architecture pattern
-- Microsoft SQL Server best practices
-
----
-
-**Version**: 1.0.0  
-**Last Updated**: February 25, 2026  
-**Maintained by**: Data Engineering Team
+-
