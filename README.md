@@ -447,17 +447,6 @@ DENY SELECT ON SCHEMA::bronze TO analyst_role;
 
 ---
 
-## Contributing
-
-We welcome contributions! Please follow these guidelines:
-
-1. **Fork the repository**
-2. **Create a feature branch**: `git checkout -b feature/your-feature-name`
-3. **Make your changes**: Follow SQL best practices and naming conventions
-4. **Test thoroughly**: Validate all scripts before committing
-5. **Document changes**: Update relevant documentation
-6. **Submit a pull request**: Provide clear description of changes
-
 ### Coding Standards
 
 - Use consistent indentation (4 spaces)
@@ -473,16 +462,6 @@ We welcome contributions! Please follow these guidelines:
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-## Contact & Support
-
-For questions, issues, or suggestions:
-
-- **Email**: data-engineering@company.com
-- **Issue Tracker**: [GitHub Issues](https://github.com/your-org/sql-data-warehouse/issues)
-- **Documentation**: [Project Wiki](https://github.com/your-org/sql-data-warehouse/wiki)
 
 ---
 
